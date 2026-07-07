@@ -84,7 +84,15 @@ body {
     opacity: 0.4;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
+}
+.p1-left .specialty {
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 420px;
 }
 .p1-left .headline {
     font-family: 'Playfair Display', Georgia, serif;
@@ -316,6 +324,9 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
+.p3-timeline {
+    grid-template-columns: repeat(6, 1fr);
+}
 .timeline-item {
     padding: 12px;
     background: #fafafa;
@@ -483,7 +494,7 @@ body {
     .p2 { padding: 32px 24px; }
     .p2 .narrative, .evidence-row, .media-block { grid-template-columns: 1fr; }
     .highlight-grid, .topic-grid { grid-template-columns: repeat(2, 1fr); }
-    .timeline { grid-template-columns: repeat(2, 1fr); }
+    .timeline, .p3-timeline { grid-template-columns: repeat(3, 1fr); }
     .p3 { padding: 32px 24px; }
     .closing { grid-template-columns: 1fr; text-align: left; }
     .closing-contact { text-align: left; }
@@ -500,8 +511,9 @@ body {
         <div class="p1-left">
             <p class="label">Editorial Media One Sheet</p>
             <h1>Henry Orozco</h1>
-            <p class="sub">Periodista · Creador digital · Columnista</p>
+            <p class="sub">Periodista colombiano · Creador digital · Columnista</p>
             <p class="origin">Marinilla, Antioquia · Colombia</p>
+            <p class="specialty">Comunicador social especializado en identidad digital, reputaci&oacute;n online e inteligencia artificial aplicada al periodismo.</p>
             <p class="headline">Construyendo una identidad digital verificable en la era de la inteligencia artificial.</p>
             <p class="intro">Periodista colombiano que investiga cómo Google, la inteligencia artificial y el conocimiento abierto están transformando la reputación profesional. Su trabajo documenta, en tiempo real, lo que significa construir una identidad pública verificable cuando los algoritmos deciden quién es quién en Internet.</p>
             <p class="credit">Fotografía · @victor.quintero.fotografia</p>
@@ -516,14 +528,16 @@ body {
     <!-- ============ PAGE 2 ============ -->
     <div class="page p2">
         <p class="section-label">La historia</p>
-        <h2>Una historia que explica el futuro del periodismo</h2>
+        <h2>M&aacute;s que una trayectoria, una historia sobre el futuro de la identidad digital.</h2>
 
         <div class="narrative">
-            <p>Henry Orozco comenzó su carrera en medios locales del Oriente Antioqueño. Escribió para <strong>El Espectador</strong>, <strong>Las 2 Orillas</strong>, <strong>Al Poniente</strong> y, desde 2021, mantiene <strong>Periodismo de Blog</strong> en <strong>El Tiempo</strong>. Pero en el camino hizo una pregunta que cambiaría el rumbo de su trabajo: &iquest;qu&eacute; pasa cuando la reputaci&oacute;n de un periodista depende no solo de lo que publica, sino de c&oacute;mo los sistemas de inteligencia artificial interpretan, organizan y muestran esa informaci&oacute;n al mundo?</p>
-            <p>En lugar de esperar una respuesta, decidi&oacute; documentar la suya. Comenz&oacute; a construir, de manera p&uacute;blica y verificable, su propia identidad digital. Cada paso qued&oacute; registrado: la creaci&oacute;n de un panel de conocimiento en Google, la documentaci&oacute;n de su trayectoria en Wikidata y Wikimedia Commons, la implementaci&oacute;n de datos estructurados en su sitio web, la vinculaci&oacute;n de referencias independientes en medios nacionales. El proceso, que hoy sigue en marcha, se convirti&oacute; en un caso pr&aacute;ctico sobre c&oacute;mo se construye la credibilidad profesional cuando las m&aacute;quinas tambi&eacute;n leen.</p>
+            <p>Mientras la inteligencia artificial redefine la forma en que se produce, distribuye y verifica la informaci&oacute;n, el periodista colombiano <strong>Henry Orozco</strong> decidi&oacute; convertir su propia identidad digital en un caso pr&aacute;ctico para comprender c&oacute;mo funcionan hoy los sistemas de conocimiento de Internet. Mientras miles de profesionales utilizan la red &uacute;nicamente para compartir contenido, &eacute;l comenz&oacute; a documentar p&uacute;blicamente un experimento poco habitual: construir una identidad digital verificable utilizando periodismo, conocimiento abierto y datos estructurados.</p>
+            <p>El resultado ha sido una presencia digital respaldada por un <strong>Google Knowledge Panel</strong>, <strong>Wikidata</strong>, <strong>Wikimedia Commons</strong>, perfiles period&iacute;sticos en <strong>Muck Rack</strong> y publicaciones independientes en medios nacionales. Su proceso se ha convertido en un caso pr&aacute;ctico sobre c&oacute;mo la inteligencia artificial y los motores de b&uacute;squeda comprenden la reputaci&oacute;n profesional. No se trata de un tutorial t&eacute;cnico ni de una gu&iacute;a de marca personal. Es una reflexi&oacute;n period&iacute;stica en tiempo real sobre qu&eacute; significa ser p&uacute;blico cuando las m&aacute;quinas tambi&eacute;n leen.</p>
         </div>
 
-        <div class="highlight-grid">
+        <!-- RECONOCIMIENTO DIGITAL -->
+        <p class="section-label" style="margin-top:8px;">Reconocimiento digital</p>
+        <div class="highlight-grid" style="margin-bottom:16px;">
             <div class="highlight-card">
                 <p class="hc-label">Panel de conocimiento</p>
                 <p class="hc-title">Google Knowledge Panel</p>
@@ -544,25 +558,47 @@ body {
                 <p class="hc-title">Muck Rack</p>
                 <p class="hc-desc">Perfil profesional con trayectoria validada en medios nacionales e independientes.</p>
             </div>
+            <div class="highlight-card">
+                <p class="hc-label">Sitio oficial</p>
+                <p class="hc-title">Web personal</p>
+                <p class="hc-desc">Plataforma central con datos estructurados, biograf&iacute;a, galer&iacute;a y archivo period&iacute;stico.</p>
+            </div>
+        </div>
+        <p style="font-size:8.5px;color:#999;margin-bottom:24px;letter-spacing:0.05em;text-transform:uppercase;">Todas estas fuentes forman parte de un mismo ecosistema de identidad digital verificable.</p>
+
+        <!-- WHY THIS MATTERS -->
+        <div style="background:#f8f7f6;padding:18px 20px;border-radius:2px;margin-bottom:20px;">
+            <p style="font-size:8px;letter-spacing:0.18em;text-transform:uppercase;color:#9a8c7a;font-weight:600;margin-bottom:6px;">&iquest;Por qu&eacute; esta historia importa?</p>
+            <p style="font-size:10px;line-height:1.7;color:#444;">Hoy los motores de b&uacute;squeda ya no solo indexan p&aacute;ginas. Comprenden entidades. Comprenden personas. Comprenden relaciones. La reputaci&oacute;n digital dej&oacute; de depender &uacute;nicamente de redes sociales. Ahora depende tambi&eacute;n de informaci&oacute;n verificable, estructurada y respaldada por fuentes independientes. El trabajo de Henry Orozco busca explicar ese fen&oacute;meno desde el periodismo.</p>
         </div>
 
         <div class="evidence-row">
             <div class="evidence-col">
-                <h4>Publicaciones propias</h4>
+                <h4>Periodismo</h4>
                 <ul>
                     <li><span class="tag-ev">Columna</span> <a href="https://blogs.eltiempo.com/periodismodeblog/">El Tiempo &mdash; Periodismo de Blog</a></li>
                     <li><span class="tag-ev">Columnista</span> <a href="https://alponiente.com/author/henry-orozco/">Al Poniente</a></li>
                     <li><span class="tag-ev">Colaborador</span> <a href="https://www.elespectador.com/">El Espectador</a></li>
                     <li><span class="tag-ev">Articulista</span> <a href="https://www.las2orillas.co/">Las 2 Orillas</a></li>
+                </ul>
+                <h4 style="margin-top:10px;">Investigaci&oacute;n</h4>
+                <ul>
                     <li><span class="tag-ev">Acad&eacute;mico</span> <a href="https://www.javeriana.edu.co/unesco/humanidadesDigitales/ponencias/IV_68.html">C&aacute;tedra UNESCO &middot; Pontificia Universidad Javeriana</a></li>
                 </ul>
             </div>
             <div class="evidence-col">
-                <h4>Cobertura sobre su trabajo</h4>
+                <h4>Identidad digital</h4>
+                <ul>
+                    <li>Google Knowledge Panel</li>
+                    <li>Wikidata &middot; Q140421360</li>
+                    <li>Wikimedia Commons</li>
+                    <li>Muck Rack</li>
+                </ul>
+                <h4 style="margin-top:10px;">Cobertura</h4>
                 <ul>
                     <li><a href="https://alponiente.com/henry-orozco-el-periodista-antioqueno-que-decidio-convertir-su-propia-evolucion-profesional-en-una-historia-para-contar/">Al Poniente &mdash; Reportaje principal</a></li>
                     <li><a href="https://edomexaldia.com/la-proxima-hoja-de-vida-podria-no-ser-un-documento-sino-una-identidad-digital-la-reflexion-del-periodista-colombiano-henry-orozco/">Edomex al D&iacute;a &mdash; Identidad digital</a></li>
-                    <li><a href="https://mioriente.com/altiplano/somos-provincia-abt-el-aplicativo-para-conocer-la-oferta-turistica-del-oriente.html">MiOriente &mdash; Proyecto Somos Provincia</a></li>
+                    <li><a href="https://mioriente.com/altiplano/somos-provincia-abt-el-aplicativo-para-conocer-la-oferta-turistica-del-oriente.html">MiOriente &mdash; Proyecto</a></li>
                     <li><a href="https://www.elenfoquecolombia.com/post/henry-orozco-comunicador-social-que-usa-el-mundo-digital-para-ayudar-a-los-mas-necesitados">El Enfoque Colombia &mdash; Perfil</a></li>
                 </ul>
             </div>
@@ -571,21 +607,60 @@ body {
 
     <!-- ============ PAGE 3 ============ -->
     <div class="page p3">
+
+        <!-- TIMELINE -->
+        <div class="timeline-section">
+            <p class="section-label">Trayectoria</p>
+            <div class="timeline p3-timeline">
+                <div class="timeline-item">
+                    <p class="ti-year">2013&ndash;16</p>
+                    <p class="ti-text">Comunicaci&oacute;n Social<br>U. Cat&oacute;lica de Oriente</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="ti-year">2014&ndash;17</p>
+                    <p class="ti-text">Primeras publicaciones<br>El Espectador</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="ti-year">2015&ndash;20</p>
+                    <p class="ti-text">Articulista<br>Las 2 Orillas</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="ti-year">2017&ndash;hoy</p>
+                    <p class="ti-text">Columnista<br>Al Poniente</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="ti-year">2021&ndash;hoy</p>
+                    <p class="ti-text">Columnista<br>El Tiempo Blogs</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="ti-year">2025&ndash;26</p>
+                    <p class="ti-text">Knowledge Panel &middot; Wikidata<br>Muck Rack &middot; Cobertura internacional</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIG EDITORIAL QUOTE -->
+        <div style="background:#111;color:#fff;padding:36px 36px;border-radius:2px;margin-bottom:24px;text-align:center;">
+            <p style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-style:italic;font-weight:400;line-height:1.4;max-width:560px;margin:0 auto;">&ldquo;La pr&oacute;xima hoja de vida ya no ser&aacute; un documento.<br>Ser&aacute; una identidad digital verificable.&rdquo;</p>
+            <p style="font-size:10px;color:#888;margin-top:14px;letter-spacing:0.1em;text-transform:uppercase;">Henry Orozco &middot; Periodista</p>
+        </div>
+
+        <!-- TOPICS -->
         <p class="section-label">Aportes</p>
         <h2>Temas sobre los que puedo aportar</h2>
 
-        <div class="topic-grid">
+        <div class="topic-grid" style="margin-bottom:16px;">
             <div class="topic-card">
                 <p class="tc-title">Inteligencia Artificial</p>
                 <p class="tc-desc">Impacto de la IA en el periodismo, la reputaci&oacute;n y la verificaci&oacute;n de informaci&oacute;n.</p>
             </div>
             <div class="topic-card">
-                <p class="tc-title">Periodismo Digital</p>
-                <p class="tc-desc">Transformaci&oacute;n de los medios, nuevas narrativas y modelos de distribuci&oacute;n de contenido.</p>
+                <p class="tc-title">Identidad Digital</p>
+                <p class="tc-desc">El futuro de la hoja de vida: de un documento est&aacute;tico a una identidad din&aacute;mica verificable.</p>
             </div>
             <div class="topic-card">
-                <p class="tc-title">Reputaci&oacute;n Digital</p>
-                <p class="tc-desc">Construcci&oacute;n de credibilidad profesional verificable en el ecosistema digital.</p>
+                <p class="tc-title">Periodismo Digital</p>
+                <p class="tc-desc">Transformaci&oacute;n de los medios, nuevas narrativas y modelos de distribuci&oacute;n de contenido.</p>
             </div>
             <div class="topic-card">
                 <p class="tc-title">Google &amp; SEO Sem&aacute;ntico</p>
@@ -596,83 +671,34 @@ body {
                 <p class="tc-desc">Documentaci&oacute;n p&uacute;blica de trayectorias y el rol de las bases de conocimiento colaborativas.</p>
             </div>
             <div class="topic-card">
-                <p class="tc-title">Marca Personal</p>
-                <p class="tc-desc">Estrategias de posicionamiento profesional basadas en evidencia, no en autopromoci&oacute;n.</p>
+                <p class="tc-title">Reputaci&oacute;n Digital</p>
+                <p class="tc-desc">Construcci&oacute;n de credibilidad profesional verificable en el ecosistema digital.</p>
             </div>
             <div class="topic-card">
                 <p class="tc-title">Comunicaci&oacute;n Estrat&eacute;gica</p>
                 <p class="tc-desc">Narrativa corporativa, gesti&oacute;n de contenido y vinculaci&oacute;n con audiencias digitales.</p>
             </div>
             <div class="topic-card">
-                <p class="tc-title">Identidad Digital</p>
-                <p class="tc-desc">El futuro de la hoja de vida: de un documento est&aacute;tico a una identidad din&aacute;mica verificable.</p>
-            </div>
-        </div>
-
-        <!-- TIMELINE -->
-        <div class="timeline-section">
-            <h4>Trayectoria</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <p class="ti-year">2013&ndash;16</p>
-                    <p class="ti-text">Universidad Cat&oacute;lica de Oriente · Comunicaci&oacute;n Social</p>
-                </div>
-                <div class="timeline-item">
-                    <p class="ti-year">2014&ndash;19</p>
-                    <p class="ti-text">Colaborador en El Espectador y Las 2 Orillas</p>
-                </div>
-                <div class="timeline-item">
-                    <p class="ti-year">2015</p>
-                    <p class="ti-text">Coautor · C&aacute;tedra UNESCO · Pontificia Universidad Javeriana</p>
-                </div>
-                <div class="timeline-item">
-                    <p class="ti-year">2021&ndash;hoy</p>
-                    <p class="ti-text">Columnista · El Tiempo · Periodismo de Blog</p>
-                </div>
-                <div class="timeline-item">
-                    <p class="ti-year">2025&ndash;26</p>
-                    <p class="ti-text">Investigaci&oacute;n sobre identidad digital · Knowledge Panel · Wikidata · Muck Rack</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- MEDIA -->
-        <div class="media-block">
-            <div>
-                <h4>Medios donde ha publicado</h4>
-                <ul>
-                    <li>El Tiempo Blogs</li>
-                    <li>Al Poniente</li>
-                    <li>Las 2 Orillas</li>
-                    <li>El Espectador</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Medios que han cubierto su trabajo</h4>
-                <ul>
-                    <li>Al Poniente</li>
-                    <li>MiOriente</li>
-                    <li>El Enfoque Colombia</li>
-                    <li>Edomex al D&iacute;a</li>
-                </ul>
+                <p class="tc-title">Knowledge Graph</p>
+                <p class="tc-desc">C&oacute;mo los sistemas de conocimiento estructurado organizan la informaci&oacute;n p&uacute;blica sobre personas y entidades.</p>
             </div>
         </div>
 
         <!-- CREATIVE FACET -->
         <div class="creative-facet">
             <h4>Otras facetas creativas</h4>
-            <p>Adem&aacute;s del periodismo, ha desarrollado proyectos musicales y art&iacute;sticos independientes que reflejan un inter&eacute;s permanente por la comunicaci&oacute;n, la narrativa y la expresi&oacute;n cultural. Estas iniciativas complementan su perfil sin definirlo: son una extensi&oacute;n natural de su oficio como contador de historias.</p>
+            <p>Adem&aacute;s del periodismo, ha desarrollado proyectos musicales y art&iacute;sticos independientes que reflejan un inter&eacute;s permanente por la comunicaci&oacute;n, la narrativa y la expresi&oacute;n cultural. Estas iniciativas complementan su perfil sin definirlo: son una extensi&oacute;n natural de su oficio como contador de historias. Tambi&eacute;n cuenta con formaci&oacute;n en desarrollo de software aplicada al periodismo digital, automatizaci&oacute;n e inteligencia artificial.</p>
         </div>
 
         <!-- CLOSING -->
         <div class="closing">
-            <div class="closing-quote">
-                &ldquo;La pr&oacute;xima hoja de vida ya no ser&aacute; un documento, sino una identidad digital verificable.&rdquo;
-                <span class="cq-attrib">Henry Orozco</span>
+            <div class="closing-quote" style="font-size:13px;font-style:normal;border-left:2px solid #c9a84c;padding-left:16px;">
+                Periodista colombiano que investiga c&oacute;mo la inteligencia artificial y el conocimiento abierto est&aacute;n transformando la reputaci&oacute;n profesional en Internet.
+                <span class="cq-attrib" style="font-size:8px;">@SoyHenryOrozco</span>
             </div>
             <div class="closing-contact">
                 <p class="cc-name">Henry Orozco</p>
-                <p class="cc-title">Periodista · Creador digital</p>
+                <p class="cc-title">Periodista colombiano · Creador digital</p>
                 <a class="cc-email" href="mailto:soyhenryorozco@gmail.com">soyhenryorozco@gmail.com</a><br>
                 <a class="cc-web" href="https://soyhenryorozco.github.io/soyhenryorozco/">soyhenryorozco.github.io/soyhenryorozco</a>
                 <p class="cc-social">@SoyHenryOrozco · Instagram · YouTube · TikTok · LinkedIn</p>
