@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soyhenryorozco.github.io/soyhenryorozco/sitemap.xml

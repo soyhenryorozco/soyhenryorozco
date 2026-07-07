@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Orozco — Editorial Media One Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+@page { size: letter; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif;
+    color: #111;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background: #e8e7e4;
+    -webkit-font-smoothing: antialiased;
+}
+
+.sheet {
+    max-width: 8.5in;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    min-height: 11in;
+    position: relative;
+    overflow: hidden;
+}
+.page + .page { border-top: 0; }
+
+/* ===== PAGE 1 — HERO ===== */
+.p1 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 11in;
+    background: #111;
+}
+.p1-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px 40px 44px 52px;
+    color: #fff;
+}
+.p1-left .label {
+    font-size: 8px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+.p1-left h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+.p1-left .sub {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.65;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+.p1-left .origin {
+    font-size: 10px;
+    font-weight: 300;
+    opacity: 0.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.p1-left .big-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-bottom: 18px;
+    max-width: 420px;
+}
+.p1-left .specialty {
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.55;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: 420px;
+}
+.p1-left .intro {
+    font-size: 10px;
+    line-height: 1.7;
+    opacity: 0.5;
+    max-width: 400px;
+    margin-bottom: 12px;
+}
+.p1-left .creative-note {
+    font-size: 9px;
+    font-style: italic;
+    opacity: 0.35;
+    max-width: 380px;
+    margin-bottom: 20px;
+}
+.p1-left .credit {
+    font-size: 7px;
+    opacity: 0.3;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.p1-right {
+    background: #222;
+    overflow: hidden;
+}
+.p1-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    opacity: 0.7;
+}
+
+/* ===== PAGE 2 — NARRATIVE + ECOSYSTEM + WHY + TIMELINE ===== */
+.p2 {
+    padding: 48px 52px 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 11in;
+}
+.p2 .section-label {
+    font-size: 7.5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #9a8c7a;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.p2 h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 24px;
+    max-width: 500px;
+}
+.p2 .narrative {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+.p2 .narrative p {
+    font-size: 10.5px;
+    line-height: 1.8;
+    color: #444;
+}
+.p2 .narrative p strong {
+    font-weight: 600;
+    color: #111;
+}
+
+/* ECO BLOCK — Identidad Digital Verificable */
+.eco-block {
+    background: #f8f7f6;
+    padding: 22px 24px;
+    border-radius: 2px;
+    border-left: 3px solid #1a3a4a;
+    margin-bottom: 24px;
+}
+.eco-block .eco-label {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1a3a4a;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.eco-block .eco-intro {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 14px;
+}
+.eco-block ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+}
+.eco-block ul li {
+    font-size: 9.5px;
+    color: #333;
+    padding: 4px 0 4px 14px;
+    position: relative;
+}
+.eco-block ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #c9a84c;
+    font-weight: 600;
+}
+.eco-block .eco-footer {
+    font-size: 8px;
+    color: #999;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* WHY IT MATTERS */
+.why-section {
+    margin-bottom: 28px;
+}
+.why-section .why-label {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a8c7a;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.why-section p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 10px;
+}
+.why-section p:last-child {
+    margin-bottom: 0;
+}
+.why-section p strong {
+    color: #111;
+    font-weight: 600;
+}
+
+/* VERTICAL TIMELINE */
+.v-timeline {
+    position: relative;
+    padding: 4px 0 4px 28px;
+    margin-top: auto;
+}
+.v-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: #ddd;
+}
+.v-tl-item {
+    position: relative;
+    padding: 10px 0 10px 18px;
+}
+.v-tl-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1a3a4a;
+    border: 2px solid #fff;
+}
+.v-tl-item .v-year {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a3a4a;
+    line-height: 1.2;
+}
+.v-tl-item .v-text {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* evidence row */
+.evidence-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.evidence-col h4 {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a8c7a;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.evidence-col ul {
+    list-style: none;
+    padding: 0;
+}
+.evidence-col ul li {
+    font-size: 9.5px;
+    color: #333;
+    padding: 4px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+.evidence-col ul li:last-child { border-bottom: none; }
+.evidence-col ul li a {
+    color: #1a3a4a;
+    text-decoration: none;
+    font-weight: 500;
+}
+.evidence-col ul li a:hover { text-decoration: underline; }
+.evidence-col ul li .tag-ev {
+    display: inline-block;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #1a3a4a;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+}
+
+/* ===== PAGE 3 — TOPICS + CLOSING ===== */
+.p3 {
+    padding: 48px 52px 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 11in;
+}
+.p3 .section-label {
+    font-size: 7.5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #9a8c7a;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.p3 h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* topic cards grid */
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+}
+.topic-card {
+    padding: 14px 12px;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+}
+.topic-card:hover { border-color: #1a3a4a; }
+.topic-card .tc-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 2px;
+}
+.topic-card .tc-desc {
+    font-size: 8px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* creative facet */
+.creative-facet {
+    background: #f8f7f6;
+    padding: 14px 20px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.creative-facet h4 {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a8c7a;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.creative-facet p {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* closing */
+.closing {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 24px;
+    align-items: end;
+}
+.closing-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #111;
+    line-height: 1.4;
+    border-left: 2px solid #c9a84c;
+    padding-left: 16px;
+}
+.closing-quote .cq-attrib {
+    display: block;
+    font-size: 8px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    color: #999;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.closing-contact {
+    text-align: right;
+}
+.closing-contact .cc-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+.closing-contact .cc-title {
+    font-size: 9px;
+    color: #888;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.closing-contact .cc-email {
+    font-size: 10px;
+    color: #1a3a4a;
+    font-weight: 500;
+    text-decoration: none;
+}
+.closing-contact .cc-email:hover { text-decoration: underline; }
+.closing-contact .cc-web {
+    font-size: 9px;
+    color: #888;
+    text-decoration: none;
+}
+.closing-contact .cc-social {
+    font-size: 8px;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+/* print */
+@media print {
+    body { background: #fff; }
+    .sheet { box-shadow: none; margin: 0; max-width: none; }
+    .page { min-height: 11in; }
+    .page + .page { page-break-before: always; }
+}
+
+/* responsive */
+@media (max-width: 800px) {
+    .p1 { grid-template-columns: 1fr; }
+    .p1-left { padding: 32px 24px; }
+    .p1-left h1 { font-size: 36px; }
+    .p1-left .big-quote { font-size: 20px; }
+    .p1-right { height: 260px; }
+    .p2 { padding: 32px 24px; }
+    .p2 .narrative, .evidence-row { grid-template-columns: 1fr; }
+    .highlight-grid, .topic-grid { grid-template-columns: repeat(2, 1fr); }
+    .eco-block ul { grid-template-columns: 1fr; }
+    .p3 { padding: 32px 24px; }
+    .closing { grid-template-columns: 1fr; text-align: left; }
+    .closing-contact { text-align: left; }
+    .creative-facet { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+    <!-- ============ PAGE 1 — HERO ============ -->
+    <div class="page p1">
+        <div class="p1-left">
+            <p class="label">Editorial Media One Sheet</p>
+            <h1>Henry Orozco</h1>
+            <p class="sub">Periodista colombiano · Creador digital · Columnista</p>
+            <p class="origin">Marinilla, Antioquia · Colombia</p>
+            <p class="big-quote">&ldquo;La pr&oacute;xima hoja de vida ya no ser&aacute; un documento.<br>Ser&aacute; una identidad digital verificable.&rdquo;</p>
+            <p class="specialty">Comunicador social especializado en periodismo, identidad digital, inteligencia artificial y reputaci&oacute;n online.</p>
+            <p class="intro">Periodista colombiano que investiga c&oacute;mo Google, la inteligencia artificial y el conocimiento abierto est&aacute;n transformando la reputaci&oacute;n profesional en Internet. Su trabajo documenta, en tiempo real, lo que significa construir una identidad p&uacute;blica verificable cuando los algoritmos deciden qui&eacute;n es qui&eacute;n en la red.</p>
+            <p class="creative-note">Tambi&eacute;n desarrolla proyectos musicales y narrativos como parte de su trayectoria creativa.</p>
+            <p class="credit">Fotograf&iacute;a &middot; @victor.quintero.fotografia</p>
+        </div>
+        <div class="p1-right">
+            <img src="https://soyhenryorozco.github.io/soyhenryorozco/images/galeria/henry-orozco-periodista-digital.jpg"
+                 alt="Henry Orozco"
+                 onerror="this.parentElement.style.background='#333'">
+        </div>
+    </div>
+
+    <!-- ============ PAGE 2 — NARRATIVE + ECOSYSTEM + WHY + TIMELINE ============ -->
+    <div class="page p2">
+
+        <p class="section-label">La historia</p>
+        <h2>M&aacute;s que una trayectoria, una historia sobre el futuro de la identidad digital.</h2>
+
+        <div class="narrative">
+            <p>Mientras la inteligencia artificial redefine la forma en que se produce, distribuye y verifica la informaci&oacute;n, el periodista colombiano <strong>Henry Orozco</strong> decidi&oacute; convertir su propia identidad digital en un caso pr&aacute;ctico para comprender c&oacute;mo funcionan hoy los sistemas de conocimiento de Internet. En lugar de limitarse a compartir contenido, comenz&oacute; a documentar p&uacute;blicamente un experimento poco habitual: construir una identidad digital verificable utilizando periodismo, conocimiento abierto y datos estructurados.</p>
+            <p>El resultado ha sido una presencia digital respaldada por fuentes independientes y verificables que hoy conforman un ecosistema de informaci&oacute;n estructurada sobre su trayectoria. Su proceso se ha convertido en un caso pr&aacute;ctico sobre c&oacute;mo la inteligencia artificial y los motores de b&uacute;squeda comprenden la reputaci&oacute;n profesional. No se trata de un tutorial t&eacute;cnico ni de una gu&iacute;a de marca personal. Es una reflexi&oacute;n period&iacute;stica en tiempo real sobre qu&eacute; significa ser p&uacute;blico cuando las m&aacute;quinas tambi&eacute;n leen.</p>
+        </div>
+
+        <!-- IDENTIDAD DIGITAL VERIFICABLE -->
+        <div class="eco-block">
+            <p class="eco-label">Identidad digital verificable</p>
+            <p class="eco-intro">Durante los &uacute;ltimos a&ntilde;os, Henry Orozco ha documentado c&oacute;mo una identidad profesional puede construirse mediante informaci&oacute;n verificable, datos estructurados y publicaciones independientes. Ese proceso integra hoy los siguientes elementos, no como logros aislados, sino como evidencia de un mismo ecosistema de identidad digital:</p>
+            <ul>
+                <li>Google Knowledge Panel &mdash; Entidad activa verificable por el motor de b&uacute;squeda</li>
+                <li>Wikidata &mdash; Perfil documentado con fuentes y validaci&oacute;n editorial</li>
+                <li>Wikimedia Commons &mdash; Archivo fotogr&aacute;fico con licencia CC BY 4.0</li>
+                <li>Muck Rack &mdash; Perfil period&iacute;stico con trayectoria validada</li>
+                <li>Sitio web personal &mdash; Plataforma central con datos estructurados</li>
+                <li>Publicaciones period&iacute;sticas &mdash; Columnas y art&iacute;culos en medios nacionales</li>
+            </ul>
+            <p class="eco-footer">Todas estas fuentes forman parte de un mismo ecosistema de identidad digital verificable.</p>
+        </div>
+
+        <!-- WHY IT MATTERS -->
+        <div class="why-section">
+            <p class="why-label">&iquest;Por qu&eacute; esta historia importa?</p>
+            <p>Hoy los motores de b&uacute;squeda ya no solo indexan p&aacute;ginas. Comprenden entidades. Comprenden personas. Comprenden relaciones. La reputaci&oacute;n digital dej&oacute; de depender &uacute;nicamente de redes sociales o de la autopromoci&oacute;n. Ahora depende de informaci&oacute;n verificable, estructurada y respaldada por fuentes independientes que los sistemas de inteligencia artificial utilizan para responder qui&eacute;n es qui&eacute;n en Internet.</p>
+            <p>La irrupci&oacute;n de la inteligencia artificial generativa ha acelerado este fen&oacute;meno. El Knowledge Graph de Google, Wikidata y las bases de conocimiento colaborativas se han convertido en la infraestructura invisible que determina c&oacute;mo aparece una persona en los resultados de b&uacute;squeda, en los asistentes de voz y en las respuestas de la IA. Millones de profesionales est&aacute;n siendo representados por sistemas que no entienden, en un proceso que ocurre sin supervisi&oacute;n editorial.</p>
+            <p><strong>Henry Orozco decidi&oacute; estudiar p&uacute;blicamente esa transformaci&oacute;n.</strong> No desde la teor&iacute;a, sino documentando su propio caso como periodista. Su trabajo no es una gu&iacute;a t&eacute;cnica ni un manual de marca personal. Es una investigaci&oacute;n en tiempo real sobre c&oacute;mo se construye la credibilidad profesional cuando las m&aacute;quinas tambi&eacute;n leen.</p>
+        </div>
+
+        <!-- TIMELINE -->
+        <div style="padding-top:8px;border-top:1px solid #eee;">
+            <p class="section-label" style="margin-bottom:12px;">Trayectoria</p>
+            <div class="v-timeline">
+                <div class="v-tl-item">
+                    <p class="v-year">2013 &mdash; 2016</p>
+                    <p class="v-text">Comunicaci&oacute;n Social &middot; Universidad Cat&oacute;lica de Oriente</p>
+                </div>
+                <div class="v-tl-item">
+                    <p class="v-year">2014 &mdash; 2017</p>
+                    <p class="v-text">Primeras publicaciones &middot; El Espectador</p>
+                </div>
+                <div class="v-tl-item">
+                    <p class="v-year">2015 &mdash; 2020</p>
+                    <p class="v-text">Articulista &middot; Las 2 Orillas</p>
+                </div>
+                <div class="v-tl-item">
+                    <p class="v-year">2017 &mdash; hoy</p>
+                    <p class="v-text">Columnista &middot; Al Poniente</p>
+                </div>
+                <div class="v-tl-item">
+                    <p class="v-year">2021 &mdash; hoy</p>
+                    <p class="v-text">Columnista &middot; El Tiempo Blogs</p>
+                </div>
+                <div class="v-tl-item">
+                    <p class="v-year">2025 &mdash; 2026</p>
+                    <p class="v-text">Knowledge Panel &middot; Wikidata &middot; Muck Rack &middot; Investigaci&oacute;n sobre identidad digital &middot; Cobertura internacional</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============ PAGE 3 — TOPICS + LOGROS + CREATIVE + CLOSING ============ -->
+    <div class="page p3">
+
+        <!-- TOPICS -->
+        <p class="section-label">Aportes</p>
+        <h2>Temas sobre los que puedo aportar</h2>
+
+        <div class="topic-grid">
+            <div class="topic-card">
+                <p class="tc-title">Inteligencia Artificial</p>
+                <p class="tc-desc">Impacto de la IA en el periodismo, la reputaci&oacute;n y la verificaci&oacute;n de informaci&oacute;n.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Identidad Digital</p>
+                <p class="tc-desc">El futuro de la hoja de vida: de un documento est&aacute;tico a una identidad din&aacute;mica verificable.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Periodismo Digital</p>
+                <p class="tc-desc">Transformaci&oacute;n de los medios, nuevas narrativas y modelos de distribuci&oacute;n de contenido.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Google &amp; SEO Sem&aacute;ntico</p>
+                <p class="tc-desc">Datos estructurados, Knowledge Graph y c&oacute;mo los buscadores interpretan la identidad.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Wikidata &amp; Conocimiento Abierto</p>
+                <p class="tc-desc">Documentaci&oacute;n p&uacute;blica de trayectorias y el rol de las bases de conocimiento colaborativas.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Reputaci&oacute;n Digital</p>
+                <p class="tc-desc">Construcci&oacute;n de credibilidad profesional verificable en el ecosistema digital.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Comunicaci&oacute;n Estrat&eacute;gica</p>
+                <p class="tc-desc">Narrativa corporativa, gesti&oacute;n de contenido y vinculaci&oacute;n con audiencias digitales.</p>
+            </div>
+            <div class="topic-card">
+                <p class="tc-title">Knowledge Graph</p>
+                <p class="tc-desc">C&oacute;mo los sistemas de conocimiento estructurado organizan la informaci&oacute;n p&uacute;blica sobre personas y entidades.</p>
+            </div>
+        </div>
+
+        <!-- EVIDENCE ROW — PERIODISMO + COBERTURA -->
+        <div class="evidence-row">
+            <div class="evidence-col">
+                <h4>Periodismo</h4>
+                <ul>
+                    <li><span class="tag-ev">Columna</span> <a href="https://blogs.eltiempo.com/periodismodeblog/">El Tiempo &mdash; Periodismo de Blog</a></li>
+                    <li><span class="tag-ev">Columnista</span> <a href="https://alponiente.com/author/henry-orozco/">Al Poniente</a></li>
+                    <li><span class="tag-ev">Colaborador</span> <a href="https://www.elespectador.com/">El Espectador</a></li>
+                    <li><span class="tag-ev">Articulista</span> <a href="https://www.las2orillas.co/">Las 2 Orillas</a></li>
+                </ul>
+                <h4 style="margin-top:10px;">Investigaci&oacute;n</h4>
+                <ul>
+                    <li><span class="tag-ev">Acad&eacute;mico</span> <a href="https://www.javeriana.edu.co/unesco/humanidadesDigitales/ponencias/IV_68.html">C&aacute;tedra UNESCO &middot; Pontificia Universidad Javeriana</a></li>
+                </ul>
+            </div>
+            <div class="evidence-col">
+                <h4>Cobertura sobre su trabajo</h4>
+                <ul>
+                    <li><a href="https://alponiente.com/henry-orozco-el-periodista-antioqueno-que-decidio-convertir-su-propia-evolucion-profesional-en-una-historia-para-contar/">Al Poniente &mdash; Reportaje principal</a></li>
+                    <li><a href="https://edomexaldia.com/la-proxima-hoja-de-vida-podria-no-ser-un-documento-sino-una-identidad-digital-la-reflexion-del-periodista-colombiano-henry-orozco/">Edomex al D&iacute;a &mdash; Identidad digital</a></li>
+                    <li><a href="https://mioriente.com/altiplano/somos-provincia-abt-el-aplicativo-para-conocer-la-oferta-turistica-del-oriente.html">MiOriente &mdash; Proyecto</a></li>
+                    <li><a href="https://www.elenfoquecolombia.com/post/henry-orozco-comunicador-social-que-usa-el-mundo-digital-para-ayudar-a-los-mas-necesitados">El Enfoque Colombia &mdash; Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CREATIVE FACET -->
+        <div class="creative-facet">
+            <h4>Otras facetas creativas</h4>
+            <p>Adem&aacute;s del periodismo, ha desarrollado proyectos musicales y art&iacute;sticos independientes que reflejan un inter&eacute;s permanente por la comunicaci&oacute;n, la narrativa y la expresi&oacute;n cultural. Estas iniciativas complementan su perfil sin definirlo: son una extensi&oacute;n natural de su oficio como contador de historias. Tambi&eacute;n cuenta con formaci&oacute;n en desarrollo de software aplicada al periodismo digital, automatizaci&oacute;n e inteligencia artificial.</p>
+        </div>
+
+        <!-- CLOSING -->
+        <div class="closing">
+            <div class="closing-quote">
+                Periodista colombiano que investiga c&oacute;mo la inteligencia artificial y el conocimiento abierto est&aacute;n transformando la reputaci&oacute;n profesional en Internet.
+                <span class="cq-attrib">@SoyHenryOrozco</span>
+            </div>
+            <div class="closing-contact">
+                <p class="cc-name">Henry Orozco</p>
+                <p class="cc-title">Periodista colombiano · Creador digital</p>
+                <a class="cc-email" href="mailto:soyhenryorozco@gmail.com">soyhenryorozco@gmail.com</a><br>
+                <a class="cc-web" href="https://soyhenryorozco.github.io/soyhenryorozco/">soyhenryorozco.github.io/soyhenryorozco</a>
+                <p class="cc-social">@SoyHenryOrozco · Instagram · YouTube · TikTok · LinkedIn</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
