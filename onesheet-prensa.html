@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Orozco — Press Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        @page { size: letter; margin: 0.5in; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif;
+            color: #111;
+            line-height: 1.5;
+            margin: 0;
+            padding: 32px;
+            background: #f1f0ed;
+            font-size: 10.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .sheet {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* HEADER — magazine split */
+        .header {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            min-height: 280px;
+            background: #111;
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 36px 36px 32px 44px;
+            color: #fff;
+        }
+        .header-text .label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: 0.5;
+            margin-bottom: 8px;
+        }
+        .header-text h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 46px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .header-text .sub {
+            font-size: 13px;
+            font-weight: 300;
+            opacity: 0.75;
+            letter-spacing: 0.04em;
+        }
+        .header-text .credit {
+            font-size: 7.5px;
+            opacity: 0.35;
+            margin-top: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .header-photo {
+            overflow: hidden;
+            background: #222;
+        }
+        .header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+        }
+
+        /* INNER */
+        .inner {
+            padding: 36px 44px 28px;
+        }
+
+        /* BIO — editorial pull */
+        .bio-section {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 36px;
+            margin-bottom: 32px;
+            align-items: start;
+        }
+        .bio-text {
+            font-size: 11.5px;
+            line-height: 1.7;
+            color: #222;
+        }
+        .bio-text strong {
+            font-weight: 600;
+        }
+        .bio-quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #888;
+            line-height: 1.5;
+            border-left: 2px solid #c9a84c;
+            padding-left: 18px;
+            margin-top: 4px;
+        }
+        .bio-quote cite {
+            display: block;
+            font-size: 10px;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            color: #aaa;
+            margin-top: 4px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .bio-meta {
+            border-top: 1px solid #eee;
+            padding-top: 14px;
+            margin-top: 14px;
+        }
+        .bio-meta-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9.5px;
+            padding: 4px 0;
+            border-bottom: 1px solid #f5f5f5;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .bio-meta-item span:first-child {
+            color: #999;
+            font-weight: 400;
+        }
+        .bio-meta-item span:last-child {
+            color: #111;
+            font-weight: 500;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            font-size: 8px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #c9a84c;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* HIGHLIGHTS GRID */
+        .highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+        .highlight-item {
+            padding: 14px 16px;
+            background: #f8f7f6;
+            border-radius: 2px;
+        }
+        .highlight-item .num {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #c9a84c;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .highlight-item h3 {
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .highlight-item p {
+            font-size: 9.5px;
+            color: #666;
+        }
+
+        /* TWO COLUMN */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+        .col h3 {
+            font-size: 9px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #c9a84c;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .col ul li {
+            font-size: 10px;
+            color: #333;
+            padding: 4px 0;
+            border-bottom: 1px solid #f5f5f5;
+            line-height: 1.5;
+        }
+        .col ul li:last-child {
+            border-bottom: none;
+        }
+        .col ul li strong {
+            font-weight: 600;
+            color: #111;
+        }
+        .col ul li a {
+            color: #111;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s;
+        }
+        .col ul li a:hover {
+            border-bottom-color: #c9a84c;
+        }
+
+        /* THREE COLUMN */
+        .three-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+        .tcol {
+            padding: 14px 16px;
+            background: #f8f7f6;
+            border-radius: 2px;
+        }
+        .tcol h4 {
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 8px;
+        }
+        .tcol p {
+            font-size: 9.5px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .tcol .label-mini {
+            font-size: 7.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #c9a84c;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .tcol a {
+            color: #111;
+            font-weight: 500;
+            font-size: 9.5px;
+        }
+
+        /* SOCIAL BAR */
+        .social-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 12px;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .social-bar a {
+            font-size: 9.5px;
+            color: #444;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: color 0.2s;
+        }
+        .social-bar a:hover {
+            color: #c9a84c;
+        }
+        .social-bar .s-label {
+            font-size: 7.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #bbb;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        /* VERIFICATION LINKS */
+        .verification-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .verification-links a {
+            display: inline-block;
+            padding: 3px 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 8.5px;
+            color: #444;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: all 0.2s;
+        }
+        .verification-links a:hover {
+            border-color: #c9a84c;
+            color: #c9a84c;
+        }
+
+        /* FOOTER */
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            padding-top: 16px;
+            border-top: 2px solid #111;
+            font-size: 9px;
+            color: #666;
+        }
+        .footer strong {
+            color: #111;
+        }
+        .footer a {
+            color: #111;
+        }
+
+        /* TAG PILLS */
+        .pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border: 1px solid #e0dcd6;
+            border-radius: 20px;
+            font-size: 7.5px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-right: 3px;
+            margin-bottom: 3px;
+        }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .sheet { box-shadow: none; max-width: none; min-height: auto; }
+            .hero { height: 300px; }
+        }
+        @media (max-width: 720px) {
+            body { padding: 12px; }
+            .inner { padding: 20px; }
+            .bio-section { grid-template-columns: 1fr; }
+            .highlights, .two-col, .three-col { grid-template-columns: 1fr; }
+            .header { grid-template-columns: 1fr; min-height: auto; }
+            .header-text { padding: 28px 24px 24px; }
+            .header-text h1 { font-size: 32px; }
+            .header-photo { height: 240px; }
+            .footer { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sheet">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-text">
+            <p class="label">Press Kit · 2026</p>
+            <h1>Henry Orozco</h1>
+            <p class="sub">Periodista · Creador digital · Desarrollador · Artista</p>
+            <p class="credit">Foto · @victor.quintero.fotografia</p>
+        </div>
+        <div class="header-photo">
+            <img src="https://soyhenryorozco.github.io/soyhenryorozco/images/galeria/henry-orozco-retrato-profesional.jpg"
+                 alt="Henry Orozco — retrato profesional"
+                 onerror="this.style.display='none'">
+        </div>
+    </header>
+
+    <div class="inner">
+
+        <!-- BIO -->
+        <div class="bio-section">
+            <div class="bio-text">
+                <p><strong>Henry Orozco</strong> (Marinilla, Antioquia, 1990) es comunicador social, periodista, creador digital y artista independiente. Su trabajo cruza el periodismo escrito, la investigación sobre identidad digital, el desarrollo full stack y la música.</p>
+                <p style="margin-top:8px;">Columnista de <strong>El Tiempo</strong> —donde publica el blog <em>Periodismo de Blog</em>— ha colaborado también con <strong>El Espectador</strong>, <strong>Las 2 Orillas</strong> y <strong>Al Poniente</strong>, con más de una década de artículos sobre cultura, sociedad y transformación digital. En 2022 lanzó su primer sencillo, <em>Quiero ser</em>, como artista pop independiente.</p>
+                <p style="margin-top:8px;">Su investigación actual documenta cómo el Knowledge Graph de Google, Wikidata y los datos estructurados están redefiniendo la reputación profesional en la era de la inteligencia artificial, una línea que ha merecido cobertura en medios de México y Colombia.</p>
+                <div class="bio-meta">
+                    <div class="bio-meta-item"><span>Nacimiento</span><span>31 de diciembre de 1990</span></div>
+                    <div class="bio-meta-item"><span>Lugar</span><span>Marinilla, Antioquia, Colombia</span></div>
+                    <div class="bio-meta-item"><span>Formación</span><span>Comunicación Social · U. Católica de Oriente</span></div>
+                    <div class="bio-meta-item"><span>Handle</span><span>@SoyHenryOrozco</span></div>
+                </div>
+            </div>
+            <div class="bio-quote">
+                &ldquo;Comunicación y tecnología, juntas, para educar, emprender y generar impacto.&rdquo;
+                <cite>— Henry Orozco</cite>
+                <div style="margin-top:12px;padding-top:12px;border-top:1px solid #eee;">
+                    <p style="font-size:10px;font-style:normal;color:#555;line-height:1.6;">
+                        <strong style="color:#c9a84c;">En cifras</strong><br>
+                        +20 artículos en medios nacionales<br>
+                        1 sencillo publicado<br>
+                        8 países visitados<br>
+                        1 ponencia UNESCO
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HIGHLIGHTS -->
+        <p class="section-title">Logros clave</p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <div class="num">01</div>
+                <h3>Columnista en El Tiempo</h3>
+                <p>Blog <em>Periodismo de Blog</em> — activo desde 2021. Artículos de opinión, cultura y análisis sobre comunicación y sociedad.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="num">02</div>
+                <h3>Google Knowledge Panel</h3>
+                <p>Entidad documentada en Wikidata (Q140421360) con panel de conocimiento activo. Perfil verificado en Muck Rack.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="num">03</div>
+                <h3>Ponencia Cátedra UNESCO</h3>
+                <p>Coautor de investigación presentada en la Pontificia Universidad Javeriana (2015). Tema: interacciones sociales y diálogo de saberes.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="num">04</div>
+                <h3>Artista musical independiente</h3>
+                <p>Sencillo <em>Quiero ser</em> (2022) en Spotify y YouTube. Pop latino / balada. Nuevos lanzamientos en desarrollo.</p>
+            </div>
+        </div>
+
+        <!-- TWO COLUMN: Press + Verification -->
+        <div class="two-col">
+            <div class="col">
+                <h3>Cobertura periodística sobre ti</h3>
+                <ul>
+                    <li><strong>Al Poniente</strong> — <a href="https://alponiente.com/henry-orozco-el-periodista-antioqueno-que-decidio-convertir-su-propia-evolucion-profesional-en-una-historia-para-contar/">El periodista antioqueño que convirtió su evolución profesional en una historia para contar</a></li>
+                    <li><strong>Edomex al Día</strong> — <a href="https://edomexaldia.com/la-proxima-hoja-de-vida-podria-no-ser-un-documento-sino-una-identidad-digital-la-reflexion-del-periodista-colombiano-henry-orozco/">La próxima hoja de vida podría ser una identidad digital</a></li>
+                    <li><strong>MiOriente</strong> — <a href="https://mioriente.com/altiplano/somos-provincia-abt-el-aplicativo-para-conocer-la-oferta-turistica-del-oriente.html">Somos Provincia ABT: la app turística del Oriente</a></li>
+                    <li><strong>El Enfoque Colombia</strong> — <a href="https://www.elenfoquecolombia.com/post/henry-orozco-comunicador-social-que-usa-el-mundo-digital-para-ayudar-a-los-mas-necesitados">Comunicador social que usa lo digital para ayudar</a></li>
+                </ul>
+                <div style="margin-top:12px;">
+                    <h3>Publicación académica</h3>
+                    <ul>
+                        <li><a href="https://www.javeriana.edu.co/unesco/humanidadesDigitales/ponencias/IV_68.html">Interacciones sociales: un acercamiento al diálogo de saberes</a> — Cátedra UNESCO de Comunicación, Pontificia Universidad Javeriana</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Identidad verificable</h3>
+                <ul>
+                    <li><a href="https://soyhenryorozco.github.io/soyhenryorozco/"><strong>Sitio web oficial</strong></a></li>
+                    <li><a href="https://www.wikidata.org/wiki/Q140421360"><strong>Wikidata</strong> — Q140421360</a></li>
+                    <li><a href="https://muckrack.com/soyhenryorozco"><strong>Muck Rack</strong> — Perfil periodístico</a></li>
+                    <li><a href="https://blogs.eltiempo.com/periodismodeblog/"><strong>Blog El Tiempo</strong> — Periodismo de Blog</a></li>
+                    <li><a href="https://alponiente.com/author/henry-orozco/"><strong>Al Poniente</strong> — Perfil de autor</a></li>
+                </ul>
+                <div style="margin-top:12px;">
+                    <h3>Formación</h3>
+                    <ul>
+                        <li><strong>Comunicador Social</strong> — Universidad Católica de Oriente</li>
+                        <li><strong>Desarrollo Full Stack</strong> — soyhenry.com</li>
+                    </ul>
+                </div>
+                <div style="margin-top:12px;">
+                    <h3>Proyectos</h3>
+                    <ul>
+                        <li><strong>WiFi Oficial</strong> — CEO · Agencia de marketing digital</li>
+                        <li><strong>En Línea Te Vi</strong> — Programa de entrevistas</li>
+                        <li><strong>Somos Provincia ABT</strong> — Director de comunicaciones</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- THREE COLUMN: Deep areas -->
+        <p class="section-title">Áreas de interés periodístico</p>
+        <div class="three-col">
+            <div class="tcol">
+                <p class="label-mini">Investigación</p>
+                <h4>Identidad digital como nueva hoja de vida</h4>
+                <p>Investigación en curso sobre SEO de entidades, Knowledge Graph, datos estructurados y el futuro de la reputación profesional verificable en la era de la IA.</p>
+                <div style="margin-top:6px;">
+                    <span class="pill">Knowledge Panel</span>
+                    <span class="pill">SEO</span>
+                    <span class="pill">IA</span>
+                </div>
+            </div>
+            <div class="tcol">
+                <p class="label-mini">Música</p>
+                <h4>Quiero ser — Single 2022</h4>
+                <p>Pop latino / balada. Disponible en <a href="https://open.spotify.com/artist/2dqKg7weU2ALiNzdYqE34v">Spotify</a> y <a href="https://www.youtube.com/watch?v=shjHWd5xHQQ">YouTube</a>. Primer lanzamiento como artista independiente. Nuevo material en desarrollo.</p>
+                <div style="margin-top:6px;">
+                    <span class="pill">Pop latino</span>
+                    <span class="pill">Independiente</span>
+                </div>
+            </div>
+            <div class="tcol">
+                <p class="label-mini">Trayectoria</p>
+                <h4>+10 años de periodismo</h4>
+                <p>Ha recorrido 8 países europeos, asistido a Tomorrowland y prepara un proyecto narrativo en Islandia. Su enfoque une la experiencia viajera con la observación social y el aprendizaje tecnológico constante.</p>
+                <div style="margin-top:6px;">
+                    <span class="pill">Viajes</span>
+                    <span class="pill">Narrativa</span>
+                    <span class="pill">Transformación</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL BAR -->
+        <div class="social-bar">
+            <span class="s-label">Redes</span>
+            <a href="https://soyhenryorozco.github.io/soyhenryorozco/">Web oficial</a>
+            <a href="https://www.instagram.com/SoyHenryOrozco">Instagram</a>
+            <a href="https://www.youtube.com/@SoyHenryOrozco">YouTube</a>
+            <a href="https://www.tiktok.com/@SoyHenryOrozco">TikTok</a>
+            <a href="https://open.spotify.com/artist/2dqKg7weU2ALiNzdYqE34v">Spotify</a>
+            <a href="https://www.facebook.com/SoyHenryOrozco/">Facebook</a>
+            <a href="https://x.com/SoyHenryOrozco">X</a>
+            <a href="https://co.linkedin.com/in/h8821">LinkedIn</a>
+            <a href="https://github.com/soyhenryorozco">GitHub</a>
+        </div>
+
+        <!-- VERIFICATION LINKS -->
+        <div class="verification-links">
+            <a href="https://soyhenryorozco.github.io/soyhenryorozco/">Sitio oficial</a>
+            <a href="https://www.wikidata.org/wiki/Q140421360">Wikidata</a>
+            <a href="https://muckrack.com/soyhenryorozco">Muck Rack</a>
+            <a href="https://blogs.eltiempo.com/periodismodeblog/">El Tiempo</a>
+            <a href="https://alponiente.com/author/henry-orozco/">Al Poniente</a>
+            <a href="https://alponiente.com/henry-orozco-el-periodista-antioqueno-que-decidio-convertir-su-propia-evolucion-profesional-en-una-historia-para-contar/">Reportaje Al Poniente</a>
+            <a href="https://edomexaldia.com/la-proxima-hoja-de-vida-podria-no-ser-un-documento-sino-una-identidad-digital-la-reflexion-del-periodista-colombiano-henry-orozco/">Edomex al Día</a>
+            <a href="https://www.javeriana.edu.co/unesco/humanidadesDigitales/ponencias/IV_68.html">Ponencia UNESCO</a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>
+                <strong>Contacto:</strong>
+                <a href="mailto:soyhenryorozco@gmail.com">soyhenryorozco@gmail.com</a>
+                · Entrevistas · Colaboraciones · Booking
+            </p>
+            <p>Press Kit · Julio 2026 · @SoyHenryOrozco</p>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>
